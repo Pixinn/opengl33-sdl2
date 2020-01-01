@@ -21,8 +21,11 @@ The build chain is handled by *cmake*.
 # How to build
 
   > mkdir build && cd build
+  
   > conan install ..
+  
   > cmake .. -DCMAKE_BUILD_TYPE=Release
+  
   > cmake --build . --config Release
   
 **Please note** that you must be consistent between your conan 32/64 bit configuration and the build. Otherwise you'll get link errors.
