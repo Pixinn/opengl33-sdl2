@@ -11,13 +11,14 @@ Those dependencies are handled by [*conan*](https://conan.io/).
 
 Install *conan* and add the *bincrafters* public repository:
   > pip install conan
+  
   > conan remote add bincrafters https://api.bintray.com/conan/bincrafters/public-conan
   
 ## cmake
 
 The build chain is handled by *cmake*.
 
-#How to build
+# How to build
 
   > mkdir build && cd build
   > conan install ..
