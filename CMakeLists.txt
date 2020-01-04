@@ -19,5 +19,5 @@ set(CMAKE_VERBOSE_MAKEFILE ON)
 add_executable(${PROJECT_NAME} src/bootstrap_ogl33_sdl2.cpp)
 
 # Set executable dependency libraries
-target_include_directories(${PROJECT_NAME} PRIVATE ${CONAN_INCLUDE_DIRS_GLEW} ${CONAN_INCLUDE_DIRS_SDL2})
-target_link_libraries(${PROJECT_NAME} ${CONAN_LIBS_GLEW}  ${CONAN_LIBS_SDL2})
+conan_set_find_library_paths(${PROJECT_NAME})
+conan_target_link_libraries(${PROJECT_NAME})
