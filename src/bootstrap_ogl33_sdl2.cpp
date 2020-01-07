@@ -61,7 +61,7 @@ namespace test {
   struct Square_t {
     unsigned hProgrammShader;
     unsigned hVao;
-    unsigned nbVertices;
+    unsigned nbIndices;
   };
 
   Square_t SetUpRectangle();
@@ -130,7 +130,7 @@ int main(int argc, char *argv[])
     // ### draw the square
     glUseProgram(square.hProgrammShader);
     glBindVertexArray(square.hVao); // seeing as we only have a single VAO there's no need to bind it every time, but we'll do so to keep things a bit more organized
-    glDrawElements(GL_TRIANGLES, square.nbVertices, GL_UNSIGNED_INT, 0);
+    glDrawElements(GL_TRIANGLES, square.nbIndices, GL_UNSIGNED_INT, 0);
     
     // # Display
     SDL_GL_SwapWindow(window); // swap the buffers work and display buffers
